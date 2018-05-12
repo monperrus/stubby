@@ -157,13 +157,9 @@ and
 \.
 .TP
 .B tls_authentication \fItype\fR
-Set the type of authentication required. For Strict Privacy, this
-should be set to \fIGETDNS_AUTHENTICATION_REQUIRED\fR. For
-Opportunistic mode, remove this setting or set to
-\fIGETDNS_AUTHENTICATION_NONE\fR.  In Opportunistic mode
-authentication of the nameserver is not required and fallback to clear
-text transports is permitted if they are in
-.I dns_transport_list
+Set the type of authentication required. There are two possible options:
+\fIGETDNS_AUTHENTICATION_REQUIRED\fR means that only secure TLS transport is used (Strict mode).
+\fIGETDNS_AUTHENTICATION_NONE\fR means to fallback to clear text transports is permitted (Opportunistic mode).
 \.
 .TP
 .B tls_query_padding_blocksize \fIblocksize\fR
